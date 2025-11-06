@@ -29,8 +29,8 @@ jobs:
         run: flutter pub get
 
       - name: Build Flutter web
-        run: flutter build web --release --base-href "/richfarmerweb/"
-        # Nếu repo tên là username.github.io, đổi thành: --base-href "/"
+        run: flutter build web --release --base-href "/"
+        # Đã cập nhật thành "/" vì sử dụng custom domain richfarmer.top
 
       - name: Deploy to gh-pages branch
         run: |
