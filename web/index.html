@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rich Farmer - Game nông trại kiếm tiền. Trồng cây, thu hoạch và kiếm tiền thật!">
+    <title>Rich Farmer - Game Nông Trại Kiếm Tiền</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v21.0"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo_rich_farmer.png" alt="Rich Farmer Logo" class="logo-img">
+                <span class="logo-text">Rich Farmer</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Trang Chủ</a></li>
+                <li><a href="#download" class="nav-link">Tải xuống</a></li>
+                <li><a href="#updates" class="nav-link">Cập Nhật</a></li>
+                <li><a href="#features" class="nav-link">Tính Năng</a></li>
+                <li><a href="#screenshots" class="nav-link">Hình Ảnh</a></li>
+                <li><a href="#support" class="nav-link">Thông tin hỗ trợ</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="assets/images/logo_rich_farmer.png" alt="Rich Farmer" class="hero-logo-img">
+            </div>
+            <h1 class="hero-title">Rich Farmer</h1>
+            <p class="hero-subtitle">Game Nông Trại Kiếm Tiền Thật</p>
+            <div class="scroll-indicator">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M12 5v14M19 12l-7 7-7-7'/%3E%3C/svg%3E" alt="Scroll" class="scroll-icon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <h2 class="section-title">Tải xuống</h2>
+            <p class="section-subtitle">*Yêu cầu tối thiểu 3 GB RAM</p>
+            
+            <div class="download-grid">
+                <!-- Android Download -->
+                <div class="download-platform">
+                    <h3 class="platform-title">Tải cho Android</h3>
+                    <div class="download-buttons">
+                        <div class="download-btn-wrapper">
+                            <a href="https://www.mediafire.com/file/t1ov7qvkry929ef/rich_farmer_release.apk/file" class="download-btn apk-download" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.worldvectorlogo.com/logos/mediafire-1.svg" alt="MediaFire" class="platform-logo">
+                                <span>Tải từ MediaFire</span>
+                            </a>
+                        </div>
+                        <div class="download-btn-wrapper">
+                            <a href="https://drive.google.com/file/d/1cIYUcntNjiVUXPQ04YzN-03FO4CqK3-g/view?usp=drive_link" class="download-btn apk-download" target="_blank" rel="noopener noreferrer">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1147px-Google_Drive_icon_%282020%29.svg.png" alt="Google Drive" class="platform-logo">
+                                <span>Tải từ Google Drive</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iOS Download -->
+                <div class="download-platform">
+                    <h3 class="platform-title">Tải cho iOS</h3>
+                    <div class="download-buttons">
+                        <div class="download-btn-wrapper">
+                            <a href="#" class="download-btn app-store disabled" onclick="return false;">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'/%3E%3C/svg%3E" alt="App Store">
+                                <span>App Store</span>
+                            </a>
+                            <div class="coming-soon-ribbon">Sắp Ra Mắt</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statement View -->
+                <div class="download-platform">
+                    <h3 class="platform-title">Thông tin</h3>
+                    <div class="download-buttons">
+                        <div class="download-btn-wrapper">
+                            <a href="https://drive.google.com/drive/folders/12PUy5yzPc-E3NUvIfz9pbDiw3mhyn7Dq" class="download-btn apk-download" target="_blank" rel="noopener noreferrer">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1147px-Google_Drive_icon_%282020%29.svg.png" alt="Google Drive" class="platform-logo">
+                                <span>Xem sao kê đổi thưởng của người chơi</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates Section -->
+    <section id="updates" class="updates-section">
+        <div class="container">
+            <h2 class="section-title">Cập Nhật</h2>
+            <div class="scroll-indicator-section">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M12 5v14M19 12l-7 7-7-7'/%3E%3C/svg%3E" alt="Scroll" class="scroll-icon">
+            </div>
+            
+            <div class="updates-content">
+                <div class="update-card">
+                    <h3 class="update-title">Phiên bản 210</h3>
+                    <p class="update-date">Thời gian cập nhật: 9:00 02/11/2025</p>
+                    <ul class="update-list">
+                        <li>Cải thiện hiệu suất game</li>
+                        <li>Sửa lỗi reset nhiệm vụ ngày mới</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Tính Năng</h2>
+            <div class="scroll-indicator-section">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M12 5v14M19 12l-7 7-7-7'/%3E%3C/svg%3E" alt="Scroll" class="scroll-icon">
+            </div>
+            
+            <div class="features-intro">
+                <p>Tham gia cùng Rich Farmer trong một cuộc phiêu lưu nông trại đầy màu sắc và thú vị!</p>
+                <p>Chuẩn bị cho game nông trại kiếm tiền thật được mong đợi nhất!</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌾</div>
+                    <h3 class="feature-title">Trồng Trọt & Thu Hoạch</h3>
+                    <p class="feature-description">Trồng cây, chăm sóc và thu hoạch để kiếm tiền thật!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Kiếm Tiền Thật</h3>
+                    <p class="feature-description">Kiếm tiền thật từ việc trồng trọt và bán sản phẩm!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3 class="feature-title">Gameplay Hấp Dẫn</h3>
+                    <p class="feature-description">Tham gia các nhiệm vụ và quest hàng ngày với phần thưởng hấp dẫn!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Kênh chat thế giới</h3>
+                    <p class="feature-description">Trò chuyện và giao lưu</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Nhiều minigame</h3>
+                    <p class="feature-description">Trò chơi Memo Match...</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Đa Ngôn Ngữ</h3>
+                    <p class="feature-description">Hiện có sẵn bằng nhiều ngôn ngữ!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots-section">
+        <div class="container">
+            <h2 class="section-title">Hình Ảnh</h2>
+            <div class="scroll-indicator-section">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M12 5v14M19 12l-7 7-7-7'/%3E%3C/svg%3E" alt="Scroll" class="scroll-icon">
+            </div>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="assets/images/screenshot1.png" alt="Rich Farmer Screenshot 1" class="screenshot-img">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/images/screenshot2.png" alt="Rich Farmer Screenshot 2" class="screenshot-img">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/images/screenshot3.png" alt="Rich Farmer Screenshot 3" class="screenshot-img">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/images/screenshot4.png" alt="Rich Farmer Screenshot 4" class="screenshot-img">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/images/screenshot5.png" alt="Rich Farmer Screenshot 5" class="screenshot-img">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/images/screenshot6.png" alt="Rich Farmer Screenshot 6" class="screenshot-img">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/images/screenshot7.png" alt="Rich Farmer Screenshot 7" class="screenshot-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support-section">
+        <div class="container">
+            <h2 class="section-title">Thông tin hỗ trợ</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/richfarmerearning" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span class="social-text">Facebook</span>
+                </a>
+                <a href="https://t.me/richfarmergroup" class="social-link telegram" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.559z"/>
+                    </svg>
+                    <span class="social-text">Nhóm Telegram</span>
+                </a>
+                <a href="mailto:richfarmerearning@gmail.com" class="social-link email" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span class="social-text">Email hỗ trợ</span>
+                </a>
+            </div>
+            
+            <!-- Facebook Page Plugin -->
+            <div class="facebook-embed-container">
+                <div class="fb-page" 
+                     data-href="https://www.facebook.com/richfarmerearning" 
+                     data-tabs="timeline" 
+                     data-width="500" 
+                     data-height="600" 
+                     data-small-header="false" 
+                     data-adapt-container-width="true" 
+                     data-hide-cover="false" 
+                     data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/richfarmerearning" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/richfarmerearning">Rich Farmer Earning</a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2025 Rich Farmer. Tất cả quyền được bảo lưu.</p>
+            <p class="footer-disclaimer">
+                Apple và biểu tượng Apple là nhãn hiệu của Apple Inc., được đăng ký tại Hoa Kỳ và các quốc gia khác. 
+                App Store là nhãn hiệu dịch vụ của Apple Inc.
+            </p>
+            <p class="footer-disclaimer">
+                Vui lòng chỉ tải ứng dụng từ các nguồn chính thức. Rich Farmer không chịu trách nhiệm về các phiên bản không chính thức.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
