@@ -40,6 +40,7 @@ jobs:
           git rm -rf . || true
           cp -r build/web/* .
           cp .nojekyll . 2>/dev/null || true
+          cp web/CNAME . 2>/dev/null || true
           git add -A
           git commit -m "Deploy to GitHub Pages - $(date '+%Y-%m-%d %H:%M:%S')"
           git push -f origin gh-pages
