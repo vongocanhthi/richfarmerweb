@@ -1,54 +1,51 @@
-# 🔧 HƯỚNG DẪN CẤU HÌNH GITHUB PAGES (BẮT BUỘC)
+# 🔧 HƯỚNG DẪN CẤU HÌNH GITHUB PAGES
 
-## ⚠️ VẤN ĐỀ
+## ✅ ĐÃ SỬA LỖI
 
-Workflow đã build thành công nhưng **thất bại ở bước "Setup Pages"** vì GitHub Pages chưa được cấu hình trong repository settings.
+Workflow đã được cập nhật để deploy trực tiếp vào branch `gh-pages` thay vì dùng GitHub Actions Pages, giúp tránh lỗi "Resource not accessible by integration".
 
-## ✅ CÁCH SỬA (BẮT BUỘC PHẢI LÀM)
+## 📋 CÁC BƯỚC CẤU HÌNH
 
-### Bước 1: Vào Settings
-Truy cập: **https://github.com/vongocanhthi/richfarmerweb/settings/pages**
+### Bước 1: Đợi Workflow Chạy Xong
 
-### Bước 2: Cấu hình Source
-**QUAN TRỌNG**: Bạn cần chọn một trong hai cách:
+Workflow sẽ tự động:
+1. Build Flutter web
+2. Deploy vào branch `gh-pages`
 
-#### Cách A: GitHub Actions (Khuyến nghị)
-1. Trong phần **Source**, chọn: **`GitHub Actions`**
-2. Nhấn **Save**
+Theo dõi tại: **https://github.com/vongocanhthi/richfarmerweb/actions**
 
-#### Cách B: Deploy from a branch (Nếu không có option GitHub Actions)
-1. Trong phần **Source**, chọn: **`Deploy from a branch`**
-2. **Branch**: Chọn `gh-pages` (sẽ được tạo tự động sau khi workflow chạy)
-3. **Folder**: Chọn `/ (root)`
-4. Nhấn **Save**
+### Bước 2: Cấu hình GitHub Pages (SAU KHI WORKFLOW HOÀN TẤT)
 
-### Bước 3: Chạy lại Workflow
-1. Vào tab **Actions**: https://github.com/vongocanhthi/richfarmerweb/actions
-2. Tìm workflow "Deploy to GitHub Pages" (workflow mới nhất)
-3. Nhấn nút **"Run workflow"** ở góc phải
-4. Chọn branch `main`
-5. Nhấn **"Run workflow"** màu xanh
+1. **Truy cập Settings**:
+   - Vào: **https://github.com/vongocanhthi/richfarmerweb/settings/pages**
 
-### Bước 4: Đợi Deployment
-- Workflow sẽ chạy trong 3-5 phút
-- Kiểm tra trạng thái tại: https://github.com/vongocanhthi/richfarmerweb/actions
+2. **Cấu hình Source**:
+   - **Source**: Chọn **`Deploy from a branch`**
+   - **Branch**: Chọn **`gh-pages`** (branch này sẽ được tạo tự động sau khi workflow chạy)
+   - **Folder**: Chọn **`/ (root)`**
+   - Nhấn **Save**
 
-## 🌐 SAU KHI HOÀN TẤT
+### Bước 3: Đợi Website Hiển Thị
 
-Website sẽ có tại:
-**https://vongocanhthi.github.io/richfarmerweb/**
+Sau khi cấu hình xong, đợi 1-2 phút để GitHub Pages build website.
 
-(Lưu ý: Có thể mất thêm vài phút sau khi workflow hoàn tất để website hiển thị)
+Website sẽ có tại: **https://vongocanhthi.github.io/richfarmerweb/**
 
 ## 🔍 KIỂM TRA
 
-- ✅ Workflow thành công: https://github.com/vongocanhthi/richfarmerweb/actions
-- ✅ Pages Settings: https://github.com/vongocanhthi/richfarmerweb/settings/pages
-- ✅ Website: https://vongocanhthi.github.io/richfarmerweb/
+- ✅ **Workflow**: https://github.com/vongocanhthi/richfarmerweb/actions
+- ✅ **Pages Settings**: https://github.com/vongocanhthi/richfarmerweb/settings/pages
+- ✅ **Website**: https://vongocanhthi.github.io/richfarmerweb/
 
 ## 📝 LƯU Ý
 
-- **Repository phải là PUBLIC** hoặc bạn có GitHub Pro để sử dụng GitHub Pages với private repo
-- Sau lần cấu hình đầu tiên, workflow sẽ **tự động deploy** mỗi khi bạn push code lên `main`
-- Nếu vẫn lỗi, hãy kiểm tra xem repository có đang ở chế độ private không
+- Workflow sẽ tự động deploy mỗi khi bạn push code lên branch `main`
+- Branch `gh-pages` sẽ được tạo tự động sau lần chạy workflow đầu tiên
+- Repository phải là **PUBLIC** hoặc bạn có **GitHub Pro** để sử dụng GitHub Pages với private repo
+- Sau lần cấu hình đầu tiên, không cần làm gì thêm - mọi thứ sẽ tự động!
 
+## 🆘 NẾU VẪN LỖI
+
+1. Kiểm tra xem branch `gh-pages` đã được tạo chưa: https://github.com/vongocanhthi/richfarmerweb/branches
+2. Kiểm tra workflow có chạy thành công không: https://github.com/vongocanhthi/richfarmerweb/actions
+3. Đảm bảo repository là PUBLIC (hoặc có GitHub Pro)
