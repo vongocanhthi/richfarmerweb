@@ -1,46 +1,74 @@
 # 🌐 HƯỚNG DẪN CẤU HÌNH CUSTOM DOMAIN: richfarmer.top
 
-## ✅ ĐÃ TẠO FILE CNAME
+Theo tài liệu chính thức của GitHub: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
 
-File `web/CNAME` đã được tạo với nội dung: `richfarmer.top`
+## ✅ ĐÃ HOÀN THÀNH
 
-Workflow đã được cập nhật để tự động copy file CNAME vào branch `gh-pages` khi deploy.
+1. ✅ File `web/CNAME` đã được tạo với nội dung: `richfarmer.top`
+2. ✅ Workflow đã được cập nhật để tự động copy file CNAME vào branch `gh-pages`
+3. ✅ Base-href đã được cập nhật thành `/` cho custom domain
 
-## 📋 CÁC BƯỚC CẤU HÌNH
+## ⚠️ LỖI HIỆN TẠI
 
-### Bước 1: Cấu hình DNS (Tại nhà cung cấp domain)
+Nếu bạn thấy lỗi **"DNS check unsuccessful"** hoặc **"Domain does not resolve to the GitHub Pages server"**, điều này có nghĩa là:
 
-Bạn cần cấu hình DNS records tại nhà cung cấp domain (nơi bạn mua domain `richfarmer.top`):
+- DNS chưa được cấu hình đúng tại nhà cung cấp domain
+- Hoặc DNS chưa propagate (cần đợi 24-48 giờ)
 
-#### Option A: Sử dụng A Records (Khuyến nghị)
+## 📋 CÁC BƯỚC CẤU HÌNH (THEO THỨ TỰ)
 
-Thêm các A records sau:
+### Bước 1: Đảm bảo File CNAME đã được Deploy
+
+1. Kiểm tra workflow đã hoàn tất:
+   - Vào: https://github.com/vongocanhthi/richfarmerweb/actions
+   - Đảm bảo workflow mới nhất đã **completed** và **success**
+
+2. Kiểm tra file CNAME trong branch gh-pages:
+   - Vào: https://github.com/vongocanhthi/richfarmerweb/tree/gh-pages
+   - Tìm file `CNAME` và kiểm tra nội dung phải là: `richfarmer.top`
+
+### Bước 2: Cấu hình DNS (QUAN TRỌNG NHẤT)
+
+Bạn **PHẢI** cấu hình DNS tại nhà cung cấp domain (nơi bạn mua domain `richfarmer.top`).
+
+#### Cấu hình A Records (Cho apex domain: richfarmer.top)
+
+Thêm **4 A records** sau tại nhà cung cấp DNS:
 
 ```
+Record 1:
 Type: A
-Name: @ (hoặc để trống)
+Name: @ (hoặc để trống, hoặc "richfarmer.top")
 Value: 185.199.108.153
 TTL: 3600 (hoặc mặc định)
 
+Record 2:
 Type: A
 Name: @ (hoặc để trống)
 Value: 185.199.109.153
 TTL: 3600
 
+Record 3:
 Type: A
 Name: @ (hoặc để trống)
 Value: 185.199.110.153
 TTL: 3600
 
+Record 4:
 Type: A
 Name: @ (hoặc để trống)
 Value: 185.199.111.153
 TTL: 3600
 ```
 
-#### Option B: Sử dụng CNAME Record
+**Lưu ý**: 
+- Một số nhà cung cấp yêu cầu nhập `@` cho apex domain
+- Một số nhà cung cấp yêu cầu để trống Name
+- Một số nhà cung cấp yêu cầu nhập chính xác domain: `richfarmer.top`
 
-Nếu muốn dùng CNAME (đơn giản hơn nhưng không hỗ trợ apex domain):
+#### (Tùy chọn) Cấu hình CNAME cho www
+
+Nếu muốn hỗ trợ cả `www.richfarmer.top`:
 
 ```
 Type: CNAME
@@ -49,9 +77,7 @@ Value: vongocanhthi.github.io
 TTL: 3600
 ```
 
-**Lưu ý**: Với CNAME, bạn chỉ có thể dùng `www.richfarmer.top`, không dùng được `richfarmer.top` (apex domain).
-
-### Bước 2: Cấu hình GitHub Pages
+### Bước 3: Cấu hình GitHub Pages Settings
 
 1. **Truy cập Settings**:
    - Vào: https://github.com/vongocanhthi/richfarmerweb/settings/pages
@@ -60,21 +86,20 @@ TTL: 3600
    - Trong phần **"Custom domain"**, nhập: `richfarmer.top`
    - Nhấn **Save**
 
-3. **Chọn SSL/HTTPS**:
-   - GitHub sẽ tự động cấp SSL certificate (có thể mất vài phút đến vài giờ)
-   - Đảm bảo checkbox **"Enforce HTTPS"** được bật
+3. **Kiểm tra DNS**:
+   - GitHub sẽ tự động kiểm tra DNS
+   - Nếu thấy lỗi, nhấn **"Check again"** sau khi đã cấu hình DNS
 
-### Bước 3: Đợi DNS Propagation
+4. **Bật HTTPS**:
+   - Sau khi DNS đã được verify, GitHub sẽ tự động cấp SSL certificate
+   - Bật checkbox **"Enforce HTTPS"** (có thể mất vài giờ để SSL được cấp)
 
-- DNS changes có thể mất **vài phút đến 48 giờ** để propagate
+### Bước 4: Đợi DNS Propagation
+
+- DNS changes có thể mất **vài phút đến 48 giờ** để propagate toàn cầu
 - Kiểm tra DNS propagation tại: https://www.whatsmydns.net/#A/richfarmer.top
 
-### Bước 4: Kiểm tra
-
-Sau khi DNS đã propagate và GitHub đã cấp SSL:
-
-- Website sẽ có tại: **https://richfarmer.top**
-- GitHub Pages URL vẫn hoạt động: **https://vongocanhthi.github.io/richfarmerweb/**
+**Kết quả mong đợi**: 4 địa chỉ IP của GitHub Pages xuất hiện ở tất cả các location
 
 ## 🔍 KIỂM TRA DNS
 
@@ -84,48 +109,74 @@ Sau khi DNS đã propagate và GitHub đã cấp SSL:
 dig richfarmer.top +short
 # Hoặc
 nslookup richfarmer.top
+# Hoặc
+host richfarmer.top
 ```
 
-Kết quả mong đợi: 4 địa chỉ IP của GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153)
-
-### Kiểm tra CNAME (nếu dùng www):
-
-```bash
-dig www.richfarmer.top +short
+**Kết quả mong đợi**: 
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
 ```
 
-Kết quả mong đợi: `vongocanhthi.github.io`
+### Kiểm tra trực tuyến:
+
+- https://www.whatsmydns.net/#A/richfarmer.top
+- https://dnschecker.org/#A/richfarmer.top
 
 ## ⚠️ LƯU Ý QUAN TRỌNG
 
 1. **DNS Propagation**: Có thể mất 24-48 giờ để DNS changes có hiệu lực toàn cầu
-2. **SSL Certificate**: GitHub sẽ tự động cấp SSL, có thể mất vài giờ
-3. **File CNAME**: Đã được tạo và sẽ tự động deploy vào branch `gh-pages`
-4. **Enforce HTTPS**: Luôn bật để đảm bảo bảo mật
+2. **SSL Certificate**: GitHub sẽ tự động cấp SSL sau khi DNS được verify, có thể mất vài giờ
+3. **File CNAME**: Phải có trong branch `gh-pages` (workflow sẽ tự động deploy)
+4. **Enforce HTTPS**: Chỉ bật được sau khi SSL certificate đã được cấp
+5. **Thứ tự thực hiện**: 
+   - Cấu hình DNS TRƯỚC
+   - Sau đó mới thêm domain trong GitHub Settings
+   - Đợi DNS propagate
+   - GitHub sẽ tự động verify và cấp SSL
 
 ## 🆘 XỬ LÝ SỰ CỐ
 
-### Nếu domain không hoạt động sau 48 giờ:
+### Lỗi: "DNS check unsuccessful"
 
-1. Kiểm tra DNS records có đúng không
-2. Kiểm tra file CNAME có trong branch `gh-pages` không
-3. Kiểm tra GitHub Pages Settings có cấu hình đúng domain không
-4. Kiểm tra SSL certificate đã được cấp chưa
+**Nguyên nhân**: DNS chưa được cấu hình hoặc chưa propagate
 
-### Kiểm tra file CNAME trên GitHub:
+**Giải pháp**:
+1. Kiểm tra DNS records có đúng 4 A records không
+2. Đợi ít nhất 1-2 giờ sau khi cấu hình DNS
+3. Kiểm tra DNS propagation tại các tool online
+4. Nhấn "Check again" trong GitHub Settings
 
-- Vào: https://github.com/vongocanhthi/richfarmerweb/tree/gh-pages
-- Tìm file `CNAME` và kiểm tra nội dung phải là `richfarmer.top`
+### Lỗi: "Domain does not resolve to the GitHub Pages server"
+
+**Nguyên nhân**: DNS không trỏ đúng đến GitHub Pages IPs
+
+**Giải pháp**:
+1. Đảm bảo có đủ 4 A records với đúng IPs
+2. Xóa các A records cũ nếu có
+3. Đợi DNS propagate
+4. Kiểm tra lại bằng `dig` hoặc `nslookup`
+
+### File CNAME không có trong branch gh-pages
+
+**Giải pháp**:
+1. Đợi workflow hoàn tất
+2. Hoặc tạo file CNAME trực tiếp trong branch gh-pages:
+   - Vào: https://github.com/vongocanhthi/richfarmerweb/tree/gh-pages
+   - Tạo file mới tên `CNAME`
+   - Nội dung: `richfarmer.top`
+   - Commit
 
 ## 📝 SAU KHI CẤU HÌNH XONG
 
-Workflow sẽ tự động:
-- Deploy file CNAME vào branch `gh-pages`
-- GitHub Pages sẽ tự động nhận diện custom domain
-- SSL certificate sẽ được cấp tự động
+Website sẽ có tại:
+- **https://richfarmer.top** (sau khi DNS và SSL đã sẵn sàng)
+- **https://vongocanhthi.github.io/richfarmerweb/** (vẫn hoạt động)
 
-Bạn chỉ cần:
-1. Cấu hình DNS tại nhà cung cấp domain
-2. Thêm domain trong GitHub Pages Settings
-3. Đợi DNS và SSL propagate
+## 🔗 TÀI LIỆU THAM KHẢO
 
+- Tài liệu chính thức: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+- Troubleshooting: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/troubleshooting-custom-domains-and-github-pages
