@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chính sách bảo mật của Rich Farmer - Game nông trại kiếm tiền">
+    <base href="$FLUTTER_BASE_HREF">
+    <title>Chính Sách Bảo Mật - Rich Farmer</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #4CAF50;
+        }
+        .privacy-header h1 {
+            color: #2E7D32;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .privacy-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .privacy-content h2 {
+            color: #2E7D32;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .privacy-content h2:first-of-type {
+            border-top: none;
+            margin-top: 0;
+        }
+        .privacy-content h3 {
+            color: #4CAF50;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .privacy-content ul, .privacy-content ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        .privacy-content li {
+            margin: 8px 0;
+        }
+        .privacy-content p {
+            margin: 15px 0;
+        }
+        .privacy-content strong {
+            color: #2E7D32;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-link:hover {
+            background: #45a049;
+        }
+        .contact-info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo_rich_farmer.png" alt="Rich Farmer Logo" class="logo-img">
+                <span class="logo-text">Rich Farmer</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Trang Chủ</a></li>
+                <li><a href="index.html#updates" class="nav-link">Cập Nhật</a></li>
+                <li><a href="index.html#download" class="nav-link">Tải xuống</a></li>
+                <li><a href="index.html#features" class="nav-link">Tính Năng</a></li>
+                <li><a href="index.html#screenshots" class="nav-link">Hình Ảnh</a></li>
+                <li><a href="index.html#support" class="nav-link">Thông tin hỗ trợ</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <h1>Chính Sách Bảo Mật (Privacy Policy)</h1>
+            <p>Rich Farmer - Game Nông Trại Kiếm Tiền</p>
+        </div>
+
+        <div class="privacy-content">
+            <p>Chào mừng bạn đến với Rich Farmer! Chúng tôi cam kết bảo vệ quyền riêng tư của bạn. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng, tiết lộ và bảo vệ thông tin của bạn khi bạn sử dụng ứng dụng di động Rich Farmer của chúng tôi.</p>
+
+            <h2>1. Thông Tin Chúng Tôi Thu Thập</h2>
+            <p>Chúng tôi có thể thu thập các loại thông tin sau đây để cung cấp và cải thiện trải nghiệm chơi game của bạn:</p>
+            
+            <h3>Thông tin Thiết bị</h3>
+            <p>Chúng tôi thu thập ID thiết bị của bạn (chẳng hạn như ID quảng cáo của Google) với mục đích chính là ngăn chặn gian lận và đảm bảo tính công bằng trong game. Thông tin này giúp chúng tôi xác định và xử lý các thiết bị có dấu hiệu vi phạm quy tắc trò chơi.</p>
+
+            <h3>Dữ liệu Game</h3>
+            <p>Dữ liệu về tiến độ chơi game của bạn, bao gồm cấp độ, tài sản (vàng, kim cương, vật phẩm), trạng thái nông trại, lịch sử giao dịch và các hoạt động trong game khác. Dữ liệu này được lưu trữ trên Firebase Realtime Database.</p>
+
+            <h3>Thông tin Tương tác</h3>
+            <p>Nội dung tin nhắn bạn gửi trong tính năng nhắn tin thế giới để duy trì môi trường giao tiếp lành mạnh và tuân thủ các quy định của game.</p>
+
+            <h3>Thông tin từ Bên thứ Ba</h3>
+            <p><strong>Nhà cung cấp Quảng cáo:</strong> Chúng tôi sử dụng các dịch vụ quảng cáo của bên thứ ba như <strong>IronSource</strong> và <strong>Yandex</strong>. Các nhà cung cấp này có thể thu thập thông tin về thiết bị của bạn và tương tác của bạn với quảng cáo (ví dụ: ID quảng cáo, địa chỉ IP, loại thiết bị, hệ điều hành) để hiển thị quảng cáo phù hợp và đo lường hiệu quả quảng cáo. Vui lòng tham khảo chính sách bảo mật của IronSource và Yandex để biết thêm chi tiết về cách họ xử lý dữ liệu của bạn.</p>
+            <ul>
+                <li>Chính sách bảo mật IronSource: <a href="https://www.is.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">https://www.is.com/legal/privacy-policy/</a></li>
+                <li>Chính sách bảo mật Yandex: <a href="https://yandex.com/legal/confidential/" target="_blank" rel="noopener noreferrer">https://yandex.com/legal/confidential/</a></li>
+            </ul>
+            <p><strong>Firebase (Google):</strong> Chúng tôi sử dụng Firebase Realtime Database để lưu trữ dữ liệu game của bạn. Firebase có thể thu thập thông tin nhất định về cách bạn sử dụng ứng dụng để cung cấp dịch vụ cho chúng tôi. Vui lòng tham khảo <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Chính sách bảo mật của Google</a> để biết thêm chi tiết.</p>
+
+            <h2>2. Cách Chúng Tôi Sử Dụng Thông Tin Của Bạn</h2>
+            <p>Chúng tôi sử dụng thông tin thu thập được cho các mục đích sau:</p>
+            <ul>
+                <li><strong>Cung cấp và Duy trì Game:</strong> Để vận hành, duy trì và cung cấp các tính năng của Rich Farmer.</li>
+                <li><strong>Cá nhân hóa Trải nghiệm:</strong> Để lưu trữ tiến độ chơi game của bạn và cung cấp trải nghiệm cá nhân hóa.</li>
+                <li><strong>Ngăn chặn Gian lận và Đảm bảo Công bằng:</strong> Sử dụng ID thiết bị và dữ liệu game để phát hiện, điều tra và ngăn chặn các hành vi gian lận (hack tiền, hack vật phẩm, tăng tốc thời gian, bot, bỏ qua nhiệm vụ) nhằm duy trì một môi trường chơi game công bằng cho tất cả người chơi.</li>
+                <li><strong>Cải thiện Game:</strong> Phân tích dữ liệu sử dụng để hiểu cách người chơi tương tác với game và cải thiện các tính năng, hiệu suất.</li>
+                <li><strong>Hỗ trợ Người dùng:</strong> Để phản hồi các yêu cầu, câu hỏi và cung cấp hỗ trợ kỹ thuật.</li>
+                <li><strong>Hiển thị Quảng cáo:</strong> Để tích hợp và hiển thị quảng cáo thông qua các đối tác bên thứ ba (IronSource, Yandex).</li>
+                <li><strong>Liên lạc:</strong> Để gửi thông báo quan trọng liên quan đến game, cập nhật hoặc các thông tin khác mà chúng tôi tin rằng bạn quan tâm.</li>
+            </ul>
+
+            <h2>3. Chia Sẻ Thông Tin Của Bạn</h2>
+            <p>Chúng tôi không bán hoặc cho thuê thông tin cá nhân của bạn cho bên thứ ba. Chúng tôi có thể chia sẻ thông tin của bạn trong các trường hợp sau:</p>
+            <ul>
+                <li><strong>Với các Nhà cung cấp Dịch vụ:</strong> Chúng tôi có thể chia sẻ thông tin với các nhà cung cấp dịch vụ bên thứ ba thực hiện các chức năng thay mặt chúng tôi, chẳng hạn như lưu trữ dữ liệu (Firebase) và phân phối quảng cáo (IronSource, Yandex). Các bên này chỉ được phép sử dụng thông tin của bạn khi cần thiết để cung cấp dịch vụ cho chúng tôi.</li>
+                <li><strong>Tuân thủ Pháp luật:</strong> Khi được yêu cầu bởi pháp luật, lệnh của tòa án hoặc để đáp ứng yêu cầu hợp lệ từ các cơ quan chính phủ.</li>
+                <li><strong>Bảo vệ Quyền lợi:</strong> Để bảo vệ quyền, tài sản hoặc sự an toàn của chúng tôi, người dùng của chúng tôi hoặc công chúng.</li>
+                <li><strong>Chuyển giao Doanh nghiệp:</strong> Trong trường hợp sáp nhập, mua lại, bán tài sản hoặc phá sản, thông tin của bạn có thể được chuyển giao như một phần của tài sản đó.</li>
+            </ul>
+
+            <h2>4. Bảo Mật Dữ Liệu</h2>
+            <p>Chúng tôi áp dụng các biện pháp bảo mật hợp lý để bảo vệ thông tin của bạn khỏi việc truy cập, sử dụng hoặc tiết lộ trái phép. Tuy nhiên, không có phương pháp truyền tải dữ liệu qua Internet hoặc phương pháp lưu trữ điện tử nào là an toàn tuyệt đối. Do đó, chúng tôi không thể đảm bảo an ninh tuyệt đối cho thông tin của bạn.</p>
+
+            <h2>5. Quyền Của Bạn</h2>
+            <p>Tùy thuộc vào luật pháp hiện hành, bạn có thể có các quyền liên quan đến thông tin cá nhân của mình, bao gồm quyền truy cập, chỉnh sửa hoặc xóa dữ liệu cá nhân của bạn. Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi qua thông tin liên hệ dưới đây.</p>
+
+            <h2>6. Quyền Riêng Tư Của Trẻ Em</h2>
+            <p>Rich Farmer không cố ý thu thập thông tin cá nhân từ trẻ em dưới 13 tuổi. Nếu bạn là cha mẹ hoặc người giám hộ và tin rằng con bạn đã cung cấp thông tin cá nhân cho chúng tôi, vui lòng liên hệ với chúng tôi để chúng tôi có thể xóa thông tin đó.</p>
+
+            <h2>7. Thay Đổi Đối Với Chính Sách Bảo Mật Này</h2>
+            <p>Chúng tôi có thể cập nhật Chính sách bảo mật của mình theo thời gian. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách bảo mật mới trên trang này. Bạn nên xem lại Chính sách bảo mật này định kỳ để biết về các thay đổi.</p>
+
+            <h2>8. Nghiêm cấm hành vi gian lận, rửa tiền, lợi dụng Rich Farmer</h2>
+            <p>Nếu gặp các trường hợp sau admin có quyền khóa tài khoản người chơi ngay mà không cần báo trước:</p>
+            <ul>
+                <li>Tài khoản không có ý định chơi game, chỉ nạp tiền vào để mua bán thẻ cào garena, funcard...</li>
+                <li>Tài khoản không có ý định chơi game, chỉ lợi dụng nạp vào để chuyển tiền từ sim (sms) ra thẻ ngân hàng hoặc ví điện tử.</li>
+                <li>Tài khoản không có ý định chơi game, chỉ nạp tiền vào và rút ra để ăn lời từ mã giảm giá của Google Play.</li>
+            </ul>
+            <p>Chúng tôi sẽ không tiếp tay cho kẻ gian, hãy chơi game một cách văn minh.</p>
+            <p><strong>Tuyên bố miễn trừ trách nhiệm:</strong> chúng tôi sẽ hoàn toàn không chịu trách nhiệm gì về thiệt hại của bạn khi tài khoản bị khóa vì đã vi phạm các chính sách trên.</p>
+
+            <h2>9. Không tuyên truyền sai sự thật về Rich Farmer</h2>
+            <p>Hành vi bịa đặt kêu Rich Farmer lừa đảo hoặc đổi thưởng không uy tín sẽ bị phạm và sẽ khóa tài khoản và thiết bị vĩnh viễn trên hệ sinh thái của Rich Farmer.</p>
+
+            <h2>10. Thông Tin Liên Hệ</h2>
+            <div class="contact-info">
+                <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách bảo mật này, vui lòng liên hệ với chúng tôi:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:richfarmerearning@gmail.com">richfarmerearning@gmail.com</a></li>
+                    <li><strong>Fanpage:</strong> <a href="https://fb.com/richfarmerearning" target="_blank" rel="noopener noreferrer">https://fb.com/richfarmerearning</a></li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="back-link">← Quay lại Trang Chủ</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2025 Rich Farmer. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
